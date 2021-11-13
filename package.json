@@ -1,0 +1,17 @@
+{
+  "name": "node-ytdlp",
+  "version": "1.0.0",
+  "description": "Nodejs ytdlp child process.",
+  "main": "index.js",
+  "repository": "https://github.com/reedHam/node-ytdlp.git",
+  "author": "reedHam <reed.hambrook@gmail.com>",
+  "license": "GPL",
+  "private": false,
+  "scripts": {
+    "download-yt-dlp": "wget https://github.com/yt-dlp/yt-dlp/releases/download/2021.11.10.1/yt-dlp && sudo chmod +x yt-dlp"
+  },
+  "dependencies": {
+    "abort-controller": "^3.0.0",
+    "node-graceful": "^3.1.0"
+  }
+}
