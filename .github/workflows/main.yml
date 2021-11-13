@@ -24,7 +24,7 @@ jobs:
       - name: JSDoc Action
         uses: andstor/jsdoc-action@v1.2.0
         with:
-          source_dir: ./download.js
+          source_dir: .
           output_dir: ./docs
           
       - name: Verified commit
