@@ -1,7 +1,7 @@
 const spawn = require('child_process').spawn;
 
 /**
- * @param {URL|string} url Target URL.
+ * @param {string} url Target URL.
  * @param {string} workingDir Working directory.
  * @param {Object} options Any passed options overwrite the values in the config file.
  * @see {@link https://github.com/yt-dlp/yt-dlp} repository for configuration documentation.
