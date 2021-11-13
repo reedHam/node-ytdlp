@@ -17,11 +17,22 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: JSDoc Action
         uses: andstor/jsdoc-action@v1.2.0
         with:
           source_dir: ./download.js
           output_dir: ./docs
+          
+      - name: Verified commit
+        uses: swinton/commit@v2.0.0
+        with:
+          # Newline-separated list of files to be committed, relative to root of repository.
+
+          files: ./docs
+          # Base directory containing files to be committed, defaults to the GitHub workspace directory path, $GITHUB_WORKSPACE.
+
+          commit-message: Build docs
