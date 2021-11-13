@@ -29,6 +29,8 @@ jobs:
           
       - name: Verified commit
         uses: swinton/commit@v2.0.0
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # Newline-separated list of files to be committed, relative to root of repository.
 
