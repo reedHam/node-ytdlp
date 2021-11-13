@@ -37,5 +37,5 @@ jobs:
         run: |
           # Stage the file, commit and push
           git add ./docs/*
-          git commit -m "new date commit"
+          git commit -m "Built Docs"
           git push origin main
