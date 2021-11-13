@@ -27,14 +27,15 @@ jobs:
           source_dir: .
           output_dir: ./docs
           
-      - name: Verified commit
-        uses: swinton/commit@v2.0.0
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          # Newline-separated list of files to be committed, relative to root of repository.
+      - name: setup git config
+        run: |
+          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
 
-          files: ./docs
-          # Base directory containing files to be committed, defaults to the GitHub workspace directory path, $GITHUB_WORKSPACE.
-
-          commit-message: Build docs
+      - name: commit
+        run: |
+          # Stage the file, commit and push
+          git add time.txt
+          git commit -m "new date commit"
+          git push origin main
